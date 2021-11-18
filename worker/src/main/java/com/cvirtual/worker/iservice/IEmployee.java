@@ -6,4 +6,5 @@ import com.cvirtual.worker.vo.v1.EmployeeVO;
 public interface IEmployee {
 
 	public EmployeeVO save(Employee employee);
+	public EmployeeVO findById(Long id);
 }
