@@ -1,4 +1,4 @@
-package com.cvirtual.mentoring.entity;
+package com.cvirtual.worker.entity;
 
 import java.util.Date;
 

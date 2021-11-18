@@ -1,4 +1,4 @@
-package com.cvirtual.mentoring.controller;
+package com.cvirtual.worker.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cvirtual.mentoring.entity.Employee;
-import com.cvirtual.mentoring.iservice.IEmployee;
+import com.cvirtual.worker.entity.Employee;
+import com.cvirtual.worker.iservice.IEmployee;
 
 
 @RestController

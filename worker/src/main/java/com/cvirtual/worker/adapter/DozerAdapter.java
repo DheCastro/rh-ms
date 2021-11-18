@@ -1,4 +1,4 @@
-package com.cvirtual.mentoring.adapter;
+package com.cvirtual.worker.adapter;
 
 import java.util.ArrayList;
 import java.util.List;

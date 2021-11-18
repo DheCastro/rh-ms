@@ -1,4 +1,4 @@
-package com.cvirtual.mentoring.vo.v1;
+package com.cvirtual.worker.vo.v1;
 
 import java.util.Date;
 

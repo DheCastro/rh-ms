@@ -1,13 +1,13 @@
-package com.cvirtual.mentoring.service;
+package com.cvirtual.worker.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cvirtual.mentoring.adapter.DozerAdapter;
-import com.cvirtual.mentoring.entity.Employee;
-import com.cvirtual.mentoring.iservice.IEmployee;
-import com.cvirtual.mentoring.persistence.repository.EmployeeRepository;
-import com.cvirtual.mentoring.vo.v1.EmployeeVO;
+import com.cvirtual.worker.adapter.DozerAdapter;
+import com.cvirtual.worker.entity.Employee;
+import com.cvirtual.worker.iservice.IEmployee;
+import com.cvirtual.worker.persistence.repository.EmployeeRepository;
+import com.cvirtual.worker.vo.v1.EmployeeVO;
 
 @Service
 public class EmployeeService implements IEmployee{

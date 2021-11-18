@@ -1,13 +1,13 @@
-package com.cvirtual.mentoring;
+package com.cvirtual.worker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MentoringApplication {
+public class WorkerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MentoringApplication.class, args);
+		SpringApplication.run(WorkerApplication.class, args);
 	}
 
 }
