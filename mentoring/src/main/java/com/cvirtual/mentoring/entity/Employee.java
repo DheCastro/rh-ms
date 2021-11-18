@@ -28,4 +28,6 @@ public class Employee {
     private Date hireDate;
 
     private String jobName;
+    
+    private Double dailyIncome;
 }
