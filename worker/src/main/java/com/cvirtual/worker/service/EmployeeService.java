@@ -25,9 +25,8 @@ public class EmployeeService implements IEmployee{
 
 	@Override
 	public EmployeeVO findById(Long id) {
-		
-		EmployeeVO vo = DozerAdapter.parseObject(repository.findById(id).get(), EmployeeVO.class);
-		return vo;
+
+		return DozerAdapter.parseObject(repository.findById(id).get(), EmployeeVO.class);
 	}
 
 	@Override
