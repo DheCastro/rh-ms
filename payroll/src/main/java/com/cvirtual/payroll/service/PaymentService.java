@@ -1,30 +1,21 @@
 package com.cvirtual.payroll.service;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-
 import com.cvirtual.payroll.entity.Payment;
 import com.cvirtual.payroll.entity.Worker;
+import com.cvirtual.payroll.feingclients.WorkerFeignClient;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class PaymentService {
 
-	@Value("${worker.host}")
-	private String workerHost;
-
 	@Autowired
-	private RestTemplate restTemplate;
+	private WorkerFeignClient workerFeignClient;
 
 	public Payment getPayment(long workerId, int days) {
-		Map<String, String> uriVariables = new HashMap<>();
-		uriVariables.put("id", ""+workerId);
 
-		Worker worker = restTemplate.getForObject(workerHost + "/employee/{id}", Worker.class, uriVariables); 
+		Worker worker = workerFeignClient.getById(workerId).getBody();
 		return new Payment(worker.getName(), worker.getDailyIncome(), days);
 	}
 }

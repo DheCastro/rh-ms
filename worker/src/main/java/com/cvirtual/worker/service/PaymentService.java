@@ -1,6 +1,5 @@
 package com.cvirtual.worker.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.cvirtual.worker.adapter.DozerAdapter;
@@ -10,7 +9,9 @@ import com.cvirtual.worker.persistence.repository.PaymentRepository;
 import com.cvirtual.worker.vo.v1.PaymentVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PaymentService implements IPayment {
 
     @Autowired
@@ -27,12 +28,8 @@ public class PaymentService implements IPayment {
     }
 
     @Override
-    public List<PaymentVO> findAll() {
-        List<PaymentVO> list = new ArrayList<>();
-
-        paymentRepository.findAll().forEach(p -> list.add(DozerAdapter.parseObject(p, PaymentVO.class)));
-        
-        return list;
+    public List<PaymentVO> findAll() {        
+        return DozerAdapter.parseListObjects(paymentRepository.findAll(), PaymentVO.class);
     }
 
     @Override

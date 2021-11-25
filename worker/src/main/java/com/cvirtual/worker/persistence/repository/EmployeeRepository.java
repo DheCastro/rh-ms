@@ -1,10 +1,10 @@
 package com.cvirtual.worker.persistence.repository;
 
-import org.springframework.data.repository.CrudRepository;
-
 import com.cvirtual.worker.entity.Employee;
 
-public interface EmployeeRepository extends CrudRepository<Employee, Long> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     
     public Employee findByName(String name);
 }

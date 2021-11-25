@@ -1,6 +1,5 @@
 package com.cvirtual.worker.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.cvirtual.worker.adapter.DozerAdapter;
@@ -31,10 +30,7 @@ public class EmployeeService implements IEmployee{
 
 	@Override
 	public List<EmployeeVO> findAll() {
-		List<EmployeeVO> listVO = new ArrayList<>();
-
-        repository.findAll().forEach(e -> listVO.add(DozerAdapter.parseObject(e, EmployeeVO.class)));
-		return listVO;
+		return DozerAdapter.parseListObjects(repository.findAll(), EmployeeVO.class);
 	}
 
 	@Override

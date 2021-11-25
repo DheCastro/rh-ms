@@ -26,11 +26,11 @@ public class UserRole implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)   
-    private Long id;
+    private Long roleId;
 
     private String roleName;
 
     @ManyToOne
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "userId", nullable = false)
     private User user;
 }
