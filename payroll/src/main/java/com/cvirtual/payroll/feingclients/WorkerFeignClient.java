@@ -1,4 +1,4 @@
-package com.cvirtual.payroll;
+package com.cvirtual.payroll.feingclients;
 
 import com.cvirtual.payroll.entity.Worker;
 
